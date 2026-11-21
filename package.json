@@ -1,0 +1,24 @@
+{
+  "name": "sentinel-ai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Source-backed cybersecurity vulnerability intelligence",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch apps/api/src/server.js",
+    "start": "node apps/api/src/server.js",
+    "test": "node --test",
+    "sync": "node apps/api/src/cli-sync.js",
+    "verify:production": "node scripts/verify-production.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "node-cron": "^4.6.0",
+    "zod": "^4.1.12"
+  }
+}
